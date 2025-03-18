@@ -1,6 +1,4 @@
 import React, { useRef } from "react";
-import Video from "../assets/video.mp4";
-import Dodo from "../assets/dodo.mp4";
 
 const BackgroundVideo = () => {
   const videoRef = useRef(null);
