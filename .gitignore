@@ -1,0 +1,32 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.mp4
+*.mov
+*.avi
+# Ignore media files
+public/Sounds/*.mp3
+src/assets/*.mp4
+
+https://drive.google.com/uc?export=download&id=131y6U0_vTxvvK9aJDfI6GaMG762jUpn4

@@ -1,0 +1,63 @@
+@media screen and (min-width: 1024px) {
+  .Home {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .desktopview {
+    display: none !important;
+  }
+}
+
+.container {
+  width: 100%;
+  /* background-color: red; */
+}
+.center {
+  display: block;
+  padding-left: 15px;
+}
+
+.love-button {
+  align-items: center;
+  display: flex;
+}
+
+.lovebuttonicon {
+  margin-left: 50px;
+}
+
+.footer {
+  justify-content: space-evenly;
+  align-items: center;
+}
+.searchbar {
+  padding-left: calc(50px);
+  padding-right: calc(50px);
+}
+.searchbar::placeholder {
+  color: white;
+  font-family: verdana;
+}
+.mobilesearch {
+  padding-left: calc(45px);
+  padding-right: calc(30px);
+}
+.mobilesearch::placeholder {
+  color: black;
+  font-size: 18px;
+}
+.gridContainer {
+  width: 320px;
+  /* background-color: red; */
+  display: grid;
+  margin: 0 auto;
+  grid-template-rows: repeat(8, ifr);
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+.gridHolder {
+  margin: 0 auto;
+  width: 360px;
+  /* background-color: yellow; */
+}
