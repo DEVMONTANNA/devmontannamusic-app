@@ -1,6 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 const BackgroundVideo = () => {
+  // const SPOTIFY_CLIENT_ID = "1a5edc32fe6a4be68052e06f3660f8b0";
+  // const SPOTIFY_CLIENT_SECRET = "3c357d7bd1164d7996db8328f051113d";
+
   const videoRef = useRef(null);
 
   const handleFullscreen = () => {

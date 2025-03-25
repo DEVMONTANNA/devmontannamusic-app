@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const desktopHeader = () => {
+  const [bgColor, setBgColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("text-white");
+  const [downloadButtonColor, setTDownloadButtonColor] = useState("text-white");
+
+  // var Button = document.getElementById("intsallButton");
+  // Button.addEventListener("click", function () {
+  //   Button.style.background = "red";
+  // });
+
   return (
     <div className="flex w-[100%] justify-evenly  h-[70px] mt-[10px]  ">
       <div className="w-[20%]  flex items-center p-[10px]">
@@ -30,12 +39,22 @@ const desktopHeader = () => {
         <div className="flex w-[70%] justify-center items-center ml-[30px]">
           {" "}
           <div>
-            <i class="fa fa-download text-[white] ml-[30px] hover:scale-x-120 flex items-center mt-[5px]"></i>
+            <i
+              // Change text color on click
+              className={`fa fa-download ml-[30px] hover:scale-x-120 flex items-center mt-[5px] p-2 cursor-pointer ${downloadButtonColor}`}
+            ></i>
             <button className="ml-[10px] p-[5px] rounded-2xl installbutton hover:scale-110  mt-[5px] ">
-              <p className="text-[white] ">Install App</p>
+              <p className="text-[white]">Install App</p>
             </button>
           </div>
-          <i className="fa fa-bell ml-[20px]  hover:scale-110 mt-[5px] text-[white]"></i>
+          <i
+            onClick={() => setTextColor("text-red-500")} // Change text color on click
+            className={`fa fa-bell ml-[30px] hover:scale-x-120 flex items-center mt-[5px] p-2 cursor-pointer ${textColor}`}
+          ></i>
+          {/* <i
+            onClick={() => setTextColor("text-yellow-500")} // Change text color on click
+            className={` fas fa-star ml-[30px] hover:scale-x-120 flex items-center mt-[5px] p-2 cursor-pointer ${textColor}`}
+          ></i> */}
         </div>
       </div>
     </div>

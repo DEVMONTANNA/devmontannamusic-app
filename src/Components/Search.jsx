@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import BackgroundVideo from "./backgroundVideo";
 
 const Search = () => {
+
   return (
     <div className="text-[white] p-[10px]   ">
       <div className="w-[100%] mt-[10px] mb-[10px] ">

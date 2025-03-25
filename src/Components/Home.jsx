@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import image6 from "../assets/image6.jpg";
 import image5 from "../assets/image5.jpg";
@@ -12,17 +12,74 @@ import Footer from "./Footer";
 import DesktopHeader from "./desktopHeader";
 
 const Home = () => {
+  const [newReleases, setNewReleases] = useState([]);
+
+  async function callData() {
+    const clientId = "1a5edc32fe6a4be68052e06f3660f8b0";
+
+    const clientSecret = "3c357d7bd1164d7996db8328f051113d";
+
+    // ✅ Make sure this line comes before using encodedCredentials
+    const encodedCredentials = btoa(`${clientId}:${clientSecret}`);
+
+    try {
+      const fetchData = await fetch("https://accounts.spotify.com/api/token", {
+        method: "POST",
+        headers: {
+          Authorization: `Basic ${encodedCredentials}`, // Make sure it's declared
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: "grant_type=client_credentials",
+      });
+
+      console.log("Fetch Response:", fetchData);
+
+      if (!fetchData.ok) {
+        const errorMessage = await fetchData.text();
+        console.log("Error:", errorMessage);
+        return;
+      }
+
+      const data = await fetchData.json();
+      console.log("Access Token Data:", data);
+
+      return data.access_token;
+    } catch (error) {
+      console.log("Network or Other Error:", error);
+    }
+  }
+
+  callData(); // Call the function
+
+  const music = new Audio("/Sounds/chike.mp3");
   const playMusic = () => {
-    const music = new Audio("/Sounds/chike.mp3");
     music.play();
   };
+  const pauseMusic = () => {
+    music.pause();
+  };
 
+  const music2 = new Audio("/Sounds/always.mp3");
+  const playMusic2 = () => {
+    music2.play();
+  };
+  const pauseMusic2 = () => {
+    music2.pause();
+  };
+
+  const music3 = new Audio("/Sounds/come and go.mp3");
+  const playMusic3 = () => {
+    music3.play();
+  };
+  const pauseMusic3 = () => {
+    music3.pause();
+  };
   return (
     <>
       <div className="desktopview">
         <DesktopHeader />
       </div>
-
+      <button onClick={callData}>click</button>
       {/* <Discover /> */}
       <div className="Home mobileview">
         <Discover />
@@ -107,8 +164,14 @@ const Home = () => {
                 Guyon waton
               </div>
             </div>
-            <div className="love-button">
-              <i class=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+
+            <div className="love-button  flex">
+              <button onClick={playMusic}>
+                <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+              </button>
+              <button onClick={pauseMusic}>
+                <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+              </button>
             </div>
           </div>
           <div className=" white flex  mt-[10px]">
@@ -122,7 +185,53 @@ const Home = () => {
               </div>
             </div>
             <div className="love-button">
-              <i class=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+              <div className="love-button flex">
+                <button onClick={playMusic2}>
+                  <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+                </button>
+                <button onClick={pauseMusic2}>
+                  <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className=" white flex mt-[10px] ">
+            <div className=" flex w-[16%] bg-[red] h-[59px] ">
+              <img src={image3} alt="Image" className=" w-[100%]" />
+            </div>
+            <div className=" center h-[59px] w-[60%]  bg-[#121212]">
+              <div className="text-[white] mb-[5px]">ROJU</div>
+              <div className="text-[white] text-[12px] font-normal">Chike</div>
+            </div>
+
+            <div className="love-button">
+              <div className="love-button flex">
+                <button onClick={playMusic3}>
+                  <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+                </button>
+                <button onClick={pauseMusic3}>
+                  <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className=" white flex mt-[10px] ">
+            <div className=" flex w-[16%] bg-[red] h-[59px] ">
+              <img src={image3} alt="Image" className=" w-[100%]" />
+            </div>
+            <div className=" center h-[59px] w-[60%]  bg-[#121212]">
+              <div className="text-[white] mb-[5px]">ROJU</div>
+              <div className="text-[white] text-[12px] font-normal">Chike</div>
+            </div>
+            <div className="love-button">
+              <div className="love-button flex">
+                <button onClick={playMusic}>
+                  <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+                </button>
+                <button onClick={pauseMusic}>
+                  <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+                </button>
+              </div>
             </div>
           </div>
           <div className=" white flex mt-[10px] ">
@@ -135,37 +244,12 @@ const Home = () => {
                 Guyon waton
               </div>
             </div>
-            <div className="love-button">
-              <i class=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
-            </div>
-          </div>
-          <div className=" white flex mt-[10px] ">
-            <div className=" flex w-[16%] bg-[red] h-[59px] ">
-              <img src={image3} alt="Image" className=" w-[100%]" />
-            </div>
-            <div className=" center h-[59px] w-[60%]  bg-[#121212]">
-              <div className="text-[white] mb-[5px]">The 1975</div>
-              <div className="text-[white] text-[12px] font-normal">
-                Guyon waton
-              </div>
-            </div>
-            <div className="love-button">
-              <i class=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
-            </div>
-          </div>
-          <div className=" white flex mt-[10px] ">
-            <div className=" flex w-[16%] bg-[red] h-[59px] ">
-              <img src={image3} alt="Image" className=" w-[100%]" />
-            </div>
-            <div className=" center h-[59px] w-[60%]  bg-[#121212]">
-              <div className="text-[white] mb-[5px]">The 1975</div>
-              <div className="text-[white] text-[12px] font-normal">
-                Guyon waton
-              </div>
-            </div>
-            <div className="love-button">
+            <div className="love-button flex">
               <button onClick={playMusic}>
-                <i class=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+                <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+              </button>
+              <button onClick={pauseMusic}>
+                <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
               </button>
             </div>
           </div>
