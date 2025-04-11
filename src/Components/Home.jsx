@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import image6 from "../assets/image6.jpg";
 import image5 from "../assets/image5.jpg";
@@ -13,6 +13,10 @@ import DesktopHeader from "./desktopHeader";
 
 const Home = () => {
   const [newReleases, setNewReleases] = useState([]);
+  const [isplaying, setIsPlaying] = React.useState(false);
+  const [music1, setMusic11] = React.useState(false);
+  const [music3, setMusic3] = React.useState(false);
+  const [music4, setMusic4] = React.useState(false);
 
   async function callData() {
     const clientId = "1a5edc32fe6a4be68052e06f3660f8b0";
@@ -48,32 +52,56 @@ const Home = () => {
       console.log("Network or Other Error:", error);
     }
   }
+  // callData(); // Call the function
+  // const tracks = [
+  //   new Audio("/Sounds/come and go.mp3"),
+  //   new Audio("/Sounds/burna.mp3"),
+  //   new Audio("/Sounds/always.mp3"),
+  // ];
 
-  callData(); // Call the function
+  const music11 = useRef(new Audio("/Sounds/chike.mp3")).current;
 
-  const music = new Audio("/Sounds/chike.mp3");
-  const playMusic = () => {
-    music.play();
+  const playMusic11 = () => {
+    if (music1) {
+      music11.pause();
+      setMusic11(false);
+    } else {
+      music11.play();
+      setMusic11(true);
+    }
   };
-  const pauseMusic = () => {
-    music.pause();
-  };
 
-  const music2 = new Audio("/Sounds/always.mp3");
+  const music2 = useRef(new Audio("/Sounds/come and go.mp3")).current;
   const playMusic2 = () => {
-    music2.play();
+    if (isplaying) {
+      music2.pause();
+      setIsPlaying(false);
+    } else {
+      music2.play();
+      setIsPlaying(true);
+    }
   };
-  const pauseMusic2 = () => {
-    music2.pause();
+  const music33 = useRef(new Audio("/Sounds/chike.mp3")).current;
+  const playMusic3 = () => {
+    if (music3) {
+      music33.pause();
+      setMusic3(false);
+    } else {
+      music33.play();
+      setMusic3(true);
+    }
+  };
+  const music44 = useRef(new Audio("/Sounds/second Sermon.mp3")).current;
+  const playMusic4 = () => {
+    if (music4) {
+      music44.pause();
+      setMusic4(false);
+    } else {
+      music44.play();
+      setMusic4(true);
+    }
   };
 
-  const music3 = new Audio("/Sounds/come and go.mp3");
-  const playMusic3 = () => {
-    music3.play();
-  };
-  const pauseMusic3 = () => {
-    music3.pause();
-  };
   return (
     <>
       <div className="desktopview">
@@ -165,12 +193,13 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="love-button  flex">
-              <button onClick={playMusic}>
-                <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
-              </button>
-              <button onClick={pauseMusic}>
-                <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+            <div className="love-button flex">
+              <button onClick={playMusic2}>
+                {isplaying ? (
+                  <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+                ) : (
+                  <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+                )}
               </button>
             </div>
           </div>
@@ -186,11 +215,12 @@ const Home = () => {
             </div>
             <div className="love-button">
               <div className="love-button flex">
-                <button onClick={playMusic2}>
-                  <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
-                </button>
-                <button onClick={pauseMusic2}>
-                  <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+                <button onClick={playMusic11}>
+                  {music1 ? (
+                    <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+                  ) : (
+                    <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+                  )}
                 </button>
               </div>
             </div>
@@ -207,10 +237,11 @@ const Home = () => {
             <div className="love-button">
               <div className="love-button flex">
                 <button onClick={playMusic3}>
-                  <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
-                </button>
-                <button onClick={pauseMusic3}>
-                  <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+                  {music3 ? (
+                    <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+                  ) : (
+                    <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+                  )}
                 </button>
               </div>
             </div>
@@ -220,16 +251,19 @@ const Home = () => {
               <img src={image3} alt="Image" className=" w-[100%]" />
             </div>
             <div className=" center h-[59px] w-[60%]  bg-[#121212]">
-              <div className="text-[white] mb-[5px]">ROJU</div>
-              <div className="text-[white] text-[12px] font-normal">Chike</div>
+              <div className="text-[white] mb-[5px]">Black Sermon</div>
+              <div className="text-[white] text-[12px] font-normal">
+                Black Sheriff
+              </div>
             </div>
             <div className="love-button">
               <div className="love-button flex">
-                <button onClick={playMusic}>
-                  <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
-                </button>
-                <button onClick={pauseMusic}>
-                  <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+                <button onClick={playMusic4}>
+                  {music4 ? (
+                    <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
+                  ) : (
+                    <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
+                  )}
                 </button>
               </div>
             </div>
@@ -244,14 +278,14 @@ const Home = () => {
                 Guyon waton
               </div>
             </div>
-            <div className="love-button flex">
+            {/* <div className="love-button flex">
               <button onClick={playMusic}>
                 <i className=" lovebuttonicon fa-solid fa-play text-[darkgoldenrod]"></i>
               </button>
               <button onClick={pauseMusic}>
                 <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 
