@@ -91,7 +91,7 @@ const Home = () => {
       setMusic3(true);
     }
   };
-  const music44 = useRef(new Audio("/Sounds/second-Sermon.mp3")).current;
+  const music44 = useRef(new Audio("/Sounds/second-sermon.mp3")).current;
   const playMusic4 = () => {
     if (music4) {
       music44.pause();
