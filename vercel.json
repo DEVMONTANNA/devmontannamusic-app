@@ -1,0 +1,14 @@
+{
+    "headers": [
+      {
+        "source": "/Sounds/(.*)",
+        "headers": [
+          {
+            "key": "Content-Type",
+            "value": "audio/mpeg"
+          }
+        ]
+      }
+    ]
+  }
+  
