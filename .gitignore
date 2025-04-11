@@ -26,7 +26,7 @@ dist-ssr
 *.mov
 *.avi
 # Ignore media files
-public/Sounds/*.mp3
+
 src/assets/*.mp4
 
 https://drive.google.com/uc?export=download&id=131y6U0_vTxvvK9aJDfI6GaMG762jUpn4
