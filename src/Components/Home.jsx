@@ -252,9 +252,7 @@ const Home = () => {
             </div>
             <div className=" center h-[59px] w-[60%]  bg-[#121212]">
               <div className="text-[white] mb-[5px]">Black Sermon</div>
-              <div className="text-[white] text-[12px] font-normal">
-                Black Sheriff
-              </div>
+              <div className="text-[white] text-[12px] font-normal">Black Sheriff</div>
             </div>
             <div className="love-button">
               <div className="love-button flex">
