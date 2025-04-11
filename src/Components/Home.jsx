@@ -71,7 +71,7 @@ const Home = () => {
     }
   };
 
-  const music2 = useRef(new Audio("/Sounds/come and go.mp3")).current;
+  const music2 = useRef(new Audio("/Sounds/come-and-go.mp3")).current;
   const playMusic2 = () => {
     if (isplaying) {
       music2.pause();
@@ -91,7 +91,7 @@ const Home = () => {
       setMusic3(true);
     }
   };
-  const music44 = useRef(new Audio("/Sounds/second Sermon.mp3")).current;
+  const music44 = useRef(new Audio("/Sounds/second-Sermon.mp3")).current;
   const playMusic4 = () => {
     if (music4) {
       music44.pause();
@@ -181,8 +181,8 @@ const Home = () => {
             Recently Played
           </p>
         </div>
-        <div className="block container pl-[15px]">
-          <div className=" white flex mt-[10px] ">
+        <div className="block container pl-[15px]  justify-between">
+          <div className=" white flex mt-[10px]  ">
             <div className=" flex w-[16%] bg-[red] h-[59px] ">
               <img src={image6} alt="Image" className=" w-[100%]" />
             </div>
@@ -203,7 +203,7 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className=" white flex  mt-[10px]">
+          <div className=" white flex  mt-[10px] ">
             <div className=" flex w-[16%] bg-[red] h-[59px] ">
               <img src={image6} alt="Image" className=" w-[100%]" />
             </div>
@@ -225,7 +225,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className=" white flex mt-[10px] ">
+          <div className=" white flex mt-[10px]  ">
             <div className=" flex w-[16%] bg-[red] h-[59px] ">
               <img src={image3} alt="Image" className=" w-[100%]" />
             </div>
@@ -246,7 +246,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className=" white flex mt-[10px] ">
+          <div className=" white flex mt-[10px]  ">
             <div className=" flex w-[16%] bg-[red] h-[59px] ">
               <img src={image3} alt="Image" className=" w-[100%]" />
             </div>
@@ -266,7 +266,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className=" white flex mt-[10px] ">
+          <div className=" white flex mt-[10px]  ">
             <div className=" flex w-[16%] bg-[red] h-[59px] ">
               <img src={image3} alt="Image" className=" w-[100%]" />
             </div>
