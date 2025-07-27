@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Link } from "react-router-dom";
 
 const desktopHeader = () => {
   const [bgColor, setBgColor] = useState("transparent");
@@ -17,9 +18,12 @@ const desktopHeader = () => {
         <i className="fa-brands fa-spotify fa-2x text-[white]"></i>
       </div>
       <div className="w-[50%]   pl-[10px] flex justify-between">
-        <div className="circle bg-[black] ">
-          <i className="fa-solid fa-house  absolute text-white mt-[25px] ml-[5px] text-[20px]"></i>
-        </div>
+        <Link to="/Discover">
+          <div className="circle bg-[black] ">
+            <i className="fa-solid fa-house  absolute text-white mt-[25px] ml-[5px] text-[20px]"></i>
+          </div>
+        </Link>
+
         <div className="w-[100%]   h-[70px] p-[10px] flex items-center justify-start">
           <div className="relative  w-[90%] ml-[30px]">
             <input

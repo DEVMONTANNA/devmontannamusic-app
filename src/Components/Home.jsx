@@ -11,6 +11,7 @@ import Discover from "./Discover";
 import Footer from "./Footer";
 import DesktopHeader from "./desktopHeader";
 
+
 const Home = () => {
   const [newReleases, setNewReleases] = useState([]);
   const [isplaying, setIsPlaying] = React.useState(false);
@@ -104,7 +105,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="desktopview">
+      <div className="desktopview hide-scrollbar ">
         <DesktopHeader />
       </div>
       <button className="text-[red]" onClick={callData}>click</button>
