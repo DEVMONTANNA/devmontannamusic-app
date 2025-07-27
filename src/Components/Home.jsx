@@ -72,7 +72,7 @@ const Home = () => {
     }
   };
 
-  const music2 = useRef(new Audio("/Sounds/come-and-go.mp3")).current;
+  const music2 = useRef(new Audio("https://devmontannamusic-app.vercel.app/Sounds/come-and-go.mp3")).current;
   const playMusic2 = () => {
     if (isplaying) {
       music2.pause();
@@ -82,7 +82,7 @@ const Home = () => {
       setIsPlaying(true);
     }
   };
-  const music33 = useRef(new Audio("/Sounds/chike.mp3")).current;
+  const music33 = useRef(new Audio("https://devmontannamusic-app.vercel.app/Sounds/come-and-go.mp3")).current;
   const playMusic3 = () => {
     if (music3) {
       music33.pause();
@@ -92,7 +92,7 @@ const Home = () => {
       setMusic3(true);
     }
   };
-  const music44 = useRef(new Audio("/Sounds/second-sermon.mp3")).current;
+  const music44 = useRef(new Audio("https://devmontannamusic-app.vercel.app/Sounds/come-and-go.mp3")).current;
   const playMusic4 = () => {
     if (music4) {
       music44.pause();
