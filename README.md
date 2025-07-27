@@ -73,8 +73,4 @@ Edit
 
 ---
 
-### ✅ Quick Edit Instructions:
-- Replace `DEVMONTANNAE` and `DEVMONTANNAMUSIACAPP` with your GitHub info.
-- Optionally update your name in the **License** section.
-
 ---
