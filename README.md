@@ -1,34 +1,5 @@
-# DevMontanna Music App 🎶
+# Vue 3 + Vite
 
-A sleek and simple music player app built with **React.js** and **Vite**, styled with **Tailwind CSS**. Features include play, pause, stop, shuffle, and responsive UI for a smooth music experience.
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
----
-
-## 🔥 Features
-
-- 🎵 Play / Pause / Stop music
-<!-- - 🔀 Shuffle songs -->
-- 📱 Responsive design
-- 🎨 Styled with Tailwind CSS
-- ⚙️ Built with Vite for fast development
-
----
-
-## 🚀 Getting Started
-
-```bash
-# Clone the project
-git clone https://github.com/DEVMONTANNA/devmontannamusic-app.git
-
-# Navigate into the project
-cd devmontannamusic-app
-
-# Install dependencies
-npm install
-
-# Start the dev server
-npm run dev
-
-🧠 Built By
-MONTANNA aka DevMontanna
-💻 Frontend Developer | 🎧 Music Lover | 🚀 Future Blockchain Dev
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).

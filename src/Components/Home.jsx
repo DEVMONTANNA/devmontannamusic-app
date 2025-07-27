@@ -107,7 +107,7 @@ const Home = () => {
       <div className="desktopview">
         <DesktopHeader />
       </div>
-      <button onClick={callData}>click</button>
+      <button className="text-[red]" onClick={callData}>click</button>
       {/* <Discover /> */}
       <div className="Home mobileview">
         <Discover />
@@ -186,7 +186,7 @@ const Home = () => {
             <div className=" flex w-[16%] bg-[red] h-[59px] ">
               <img src={image6} alt="Image" className=" w-[100%]" />
             </div>
-            <div className=" center h-[59px] w-[60%]  bg-[#121212]">
+            <div className=" center h-[59px] w-[60%]  ">
               <div className="text-[white] mb-[5px]">Cold Play</div>
               <div className="text-[white] text-[12px] font-normal">
                 Guyon waton
@@ -207,7 +207,7 @@ const Home = () => {
             <div className=" flex w-[16%] bg-[red] h-[59px] ">
               <img src={image6} alt="Image" className=" w-[100%]" />
             </div>
-            <div className=" center h-[59px] w-[60%]  bg-[#121212]">
+            <div className=" center h-[59px] w-[60%]  ">
               <div className="text-[white] mb-[5px]">Black pink</div>
               <div className="text-[white] text-[12px] font-normal">
                 Guyon waton
@@ -229,7 +229,7 @@ const Home = () => {
             <div className=" flex w-[16%] bg-[red] h-[59px] ">
               <img src={image3} alt="Image" className=" w-[100%]" />
             </div>
-            <div className=" center h-[59px] w-[60%]  bg-[#121212]">
+            <div className=" center h-[59px] w-[60%]  ">
               <div className="text-[white] mb-[5px]">ROJU</div>
               <div className="text-[white] text-[12px] font-normal">Chike</div>
             </div>
@@ -250,9 +250,11 @@ const Home = () => {
             <div className=" flex w-[16%] bg-[red] h-[59px] ">
               <img src={image3} alt="Image" className=" w-[100%]" />
             </div>
-            <div className=" center h-[59px] w-[60%]  bg-[#121212]">
+            <div className=" center h-[59px] w-[60%] ">
               <div className="text-[white] mb-[5px]">Black Sermon</div>
-              <div className="text-[white] text-[12px] font-normal">Black Sheriff</div>
+              <div className="text-[white] text-[12px] font-normal">
+                Black Sheriff
+              </div>
             </div>
             <div className="love-button">
               <div className="love-button flex">
@@ -270,7 +272,7 @@ const Home = () => {
             <div className=" flex w-[16%] bg-[red] h-[59px] ">
               <img src={image3} alt="Image" className=" w-[100%]" />
             </div>
-            <div className=" center h-[59px] w-[60%]  bg-[#121212]">
+            <div className=" center h-[59px] w-[60%]  ">
               <div className="text-[white] mb-[5px]">The 1975</div>
               <div className="text-[white] text-[12px] font-normal">
                 Guyon waton
