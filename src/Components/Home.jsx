@@ -11,7 +11,6 @@ import Discover from "./Discover";
 import Footer from "./Footer";
 import DesktopHeader from "./desktopHeader";
 
-
 const Home = () => {
   const [newReleases, setNewReleases] = useState([]);
   const [isplaying, setIsPlaying] = React.useState(false);
@@ -72,7 +71,9 @@ const Home = () => {
     }
   };
 
-  const music2 = useRef(new Audio("https://devmontannamusic-app.vercel.app/Sounds/come-and-go.mp3")).current;
+  const music2 = useRef(
+    new Audio("https://devmontannamusic-app.vercel.app/Sounds/come-and-go.mp3")
+  ).current;
   const playMusic2 = () => {
     if (isplaying) {
       music2.pause();
@@ -82,7 +83,9 @@ const Home = () => {
       setIsPlaying(true);
     }
   };
-  const music33 = useRef(new Audio("https://devmontannamusic-app.vercel.app/Sounds/come-and-go.mp3")).current;
+  const music33 = useRef(
+    new Audio("https://devmontannamusic-app.vercel.app/Sounds/come-and-go.mp3")
+  ).current;
   const playMusic3 = () => {
     if (music3) {
       music33.pause();
@@ -92,15 +95,11 @@ const Home = () => {
       setMusic3(true);
     }
   };
-  const music44 = useRef(new Audio("https://devmontannamusic-app.vercel.app/Sounds/come-and-go.mp3")).current;
-  const playMusic4 = () => {
-    if (music4) {
-      music44.pause();
-      setMusic4(false);
-    } else {
-      music44.play();
-      setMusic4(true);
-    }
+  const music44 = useRef(
+    new Audio("https://devmontannamusic-app.vercel.app/Sounds/come-and-go.mp3")
+  ).current;
+  const playMusicc = () => {
+    music44.play();
   };
 
   return (
@@ -108,7 +107,9 @@ const Home = () => {
       <div className="desktopview hide-scrollbar ">
         <DesktopHeader />
       </div>
-      <button className="text-[red]" onClick={callData}>click</button>
+      <button className="text-[red]" onClick={callData}>
+        click
+      </button>
       {/* <Discover /> */}
       <div className="Home mobileview">
         <Discover />
@@ -216,7 +217,7 @@ const Home = () => {
             </div>
             <div className="love-button">
               <div className="love-button flex">
-                <button onClick={playMusic11}>
+                <button onClick={playMusicc}>
                   {music1 ? (
                     <i className=" lovebuttonicon fa-solid fa-pause text-[darkgoldenrod]"></i>
                   ) : (
