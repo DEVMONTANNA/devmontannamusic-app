@@ -44,7 +44,7 @@ Edit
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/DEVMONTANNA/devmontannamusic-app.git
 
 # Install dependencies
 npm install
